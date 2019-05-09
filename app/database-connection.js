@@ -11,7 +11,7 @@ export const initMongoConnection = () => {
     );
 }
 
-export const mysqlConnection = () => {
+export const initMysqlConnection = () => {
     const connection = mysql.createConnection({
         host: "dating-prod-read.cuysgrvqotwf.us-east-1.rds.amazonaws.com",
         user: process.env.SCHMUCKS_MYSQL_USERNAME,

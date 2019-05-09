@@ -4,10 +4,9 @@ const bodyParser = require('body-parser');
 const cors       = require('cors');
 const User       = require('users');
 const jwt        = require('jsonwebtoken');
-
 const initMongoConnection = require('database-connection');
-const mysqlConnection = require('database-connection')
-
+const initMysqlConnection = require('database-connection');
+const mysqlConnection = initMysqlConnection();
 initMongoConnection();
 
 app.use(bodyParser.urlencoded({ extended: true }));
